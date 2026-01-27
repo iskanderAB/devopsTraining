@@ -1,0 +1,12 @@
+services:
+  node-app:
+    build: .
+    image: iskanderab/node-app
+    container_name: "node-app-container"
+    volumes:
+      - ./src:/app/src
+    ports: 
+      - "3000:3002"
+    env_file: "./.env"
+
+
