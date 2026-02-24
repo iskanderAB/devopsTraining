@@ -1,0 +1,12 @@
+services:
+  node-app:
+    build:
+      context: .
+      args:
+        - env=production
+    container_name: "node-app-container-prod"
+    environment: 
+      - NODE_ENV=production
+    command: ["yarn", "start"]
+
+

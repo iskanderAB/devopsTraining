@@ -1,0 +1,14 @@
+services:
+  node-app:
+    build:
+      context: .
+      args:
+        - env=development
+    container_name: "node-app-container-dev"
+    volumes:
+      - ./src:/app/src
+    environment: 
+      - NODE_ENV=development 
+    command: ["yarn", "dev"]
+
+
